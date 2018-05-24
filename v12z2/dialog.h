@@ -20,13 +20,6 @@ public:
 public slots:
     void YLRead(void);
 
-private slots:
-    void on_pushButton_clicked();
-
-    void on_pushButton_2_clicked();
-
-    void on_pushButton_3_clicked();
-
 private:
     Ui::Dialog *ui;
     int VoltageVal;

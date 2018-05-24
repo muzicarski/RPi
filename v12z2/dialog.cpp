@@ -1,6 +1,6 @@
 #include "dialog.h"
 #include "ui_dialog.h"
-//#include "yl_board.h"
+#include "yl_board.h"
 
 Dialog::Dialog(QWidget *parent) :
     QDialog(parent),
@@ -11,7 +11,7 @@ Dialog::Dialog(QWidget *parent) :
     temp = 0;
     light = 0;
 
-    //yl_init(fd);
+    yl_init(fd);
 
     tim1 = new QTimer(this);
     tim1 -> start(1000);
@@ -27,11 +27,17 @@ Dialog::~Dialog()
 void Dialog::YLRead(void)
 {
 
-   // readYL(fd,VoltageVal,temp,light);
+    readYL(fd,VoltageVal,temp,light);
+
+    ui->dial->setValue(VoltageVal);
+
+    ui->verticalSlider->setValue(light);
+
+    ui->lcdNumber->display(QString::number(temp));
 
 }
 
-void Dialog::on_pushButton_clicked()
+/*void Dialog::on_pushButton_clicked()                      //DEBUG TOOLS
 {
     bool ok;
     VoltageVal = (ui->lineEdit->text()).toInt(&ok,10);
@@ -55,4 +61,4 @@ void Dialog::on_pushButton_3_clicked()
     ui->lcdNumber->display(QString::number(temp));
 
 
-}
+}*/

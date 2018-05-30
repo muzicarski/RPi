@@ -37,28 +37,3 @@ void Dialog::YLRead(void)
 
 }
 
-/*void Dialog::on_pushButton_clicked()                      //DEBUG TOOLS
-{
-    bool ok;
-    VoltageVal = (ui->lineEdit->text()).toInt(&ok,10);
-
-    ui->dial->setValue(VoltageVal);
-}
-
-void Dialog::on_pushButton_2_clicked()
-{
-    bool ok;
-    light = (ui->lineEdit_2->text()).toInt(&ok,10);
-
-    ui->verticalSlider->setValue(light);
-}
-
-void Dialog::on_pushButton_3_clicked()
-{
-    bool ok;
-    temp = (ui->lineEdit_3->text()).toDouble(&ok);
-
-    ui->lcdNumber->display(QString::number(temp));
-
-
-}*/

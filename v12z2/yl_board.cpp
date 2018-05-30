@@ -25,6 +25,8 @@ void readYL(int &fd, int &adc, double &t, int &light)
 
     FILE * ft;
     char tekst[100];
+
+    //INSERT PROPER DEVICE NAME  -->        |-----| 
     ft = fopen("/sys/bus/w1/devices/28-000005da8ca8/w1_slave","r");
 
     if (ft==NULL) return;

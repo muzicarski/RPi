@@ -24,7 +24,7 @@ void player_control (int control_distance)
 	  music_volume =(int) map((long)distance);
 	  sprintf(sysControl,VOLUME,music_volume);
 	  system(sysControl);
-	  delay(500);
+	  delay(200);
 	}
       else if(distance >= 60 && distance <=65)
 	{
